@@ -17,7 +17,6 @@ function run(file, selenium, capabilities, options) {
       child.once('error', reject);
       child.once('exit', function (exitCode) {
         setTimeout(function () {
-          outputResults(results);
           resolve({
             results: results,
             exitCode: exitCode
