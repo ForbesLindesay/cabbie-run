@@ -13,7 +13,7 @@ process.once('message', function (message) {
   };
   process.stderr.write = function (data) {
     process.send({
-      order: order++
+      order: order++,
       stream: 'stderr',
       data: data
     });

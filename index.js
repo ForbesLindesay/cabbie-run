@@ -12,7 +12,7 @@ function run(file, selenium, capabilities, options) {
   return Promise.from(browser.getSessionID()).then(function (sessionID) {
     options.sessionID = sessionID;
     return new Promise(function (resolve, reject) {
-      var child = cp.fork(require.resolve('./runner'), {silent: true});
+      var child = cp.fork(require.resolve('./runner'), {silent: false});
       var results = [];
       child.once('error', reject);
       child.once('exit', function (exitCode) {
@@ -23,8 +23,8 @@ function run(file, selenium, capabilities, options) {
           });
         }, 1000);
       });
-      child.on('message', function (data) {
-        results[data.order] = message;
+      child.on('message', function (message) {
+        results[message.order] = message;
       });
       child.send({
         script: file,
