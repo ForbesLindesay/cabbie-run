@@ -1,10 +1,10 @@
 {
   "name": "cabbie-run",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Run a test file with a cabbie driver in a separate process",
   "keywords": [],
   "dependencies": {
-    "cabbie": "0.0.5",
+    "cabbie": "0.0.6",
     "promise": "~4.0.0"
   },
   "devDependencies": {},
