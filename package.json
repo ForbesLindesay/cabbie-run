@@ -1,6 +1,6 @@
 {
   "name": "cabbie-run",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Run a test file with a cabbie driver in a separate process",
   "keywords": [],
   "dependencies": {
