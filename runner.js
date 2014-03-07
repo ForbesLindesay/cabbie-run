@@ -18,6 +18,12 @@ process.once('message', function (message) {
       data: data
     });
   };
+  process.once('uncaughtException', function (err) {
+    console.error((err.stack || err) + '');
+    setTimeout(function () {
+      process.exit(1);
+    }, 1000);
+  });
   var browser = getBrowser(message.selenium,
                            message.capabilities,
                            message.options);
