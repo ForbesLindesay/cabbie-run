@@ -1,6 +1,7 @@
 'use strict';
 
 var cp = require('child_process');
+var Promise = require('promise');
 var getBrowser = require('cabbie');
 
 module.exports = run;
