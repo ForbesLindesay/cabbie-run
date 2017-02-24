@@ -4,8 +4,8 @@
   "description": "Run a test file with a cabbie driver in a separate process",
   "keywords": [],
   "dependencies": {
-    "cabbie": "0.0.7",
-    "promise": "~4.0.0"
+    "cabbie": "0.5.1",
+    "promise": "~7.1.1"
   },
   "devDependencies": {},
   "scripts": {},
